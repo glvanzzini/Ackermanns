@@ -34,6 +34,7 @@ public class Ack2 {
         if(m > 0 && n > 0){
             return Ack(m -1, Ack(m, n - 1));
         }
-        return n;
+
+        return -1;
     }
 }
