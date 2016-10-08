@@ -31,7 +31,8 @@ public class Timer {
 
     public static void startTimer(){
         Date dteTms = new Date();
-        lngStartIt = dteTms.getTime();
+        lngStartIt = System.nanoTime();
+        //dteTms.getTime();
 
         System.out.println("Timer started at " + lngStartIt);
 
@@ -48,10 +49,10 @@ public class Timer {
 
     public static void stopTimer(){
         Date dteRms = new Date();
-        lngStopIt = dteRms.getTime();
+        lngStopIt = System.nanoTime();
 
         System.out.println("Timer stopped at " + lngStopIt);
-        System.out.println("Total time: " + (lngStopIt - lngStartIt) + " milliseconds");
+        System.out.println("Total time: " + (lngStopIt - lngStartIt) + " nanoseconds");
     }
 
 //    public static void printTimer(){

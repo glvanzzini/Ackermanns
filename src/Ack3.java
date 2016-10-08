@@ -2,8 +2,9 @@
  * Created by jacobmurillo on 10/7/16.
  */
 public class Ack3 {
-
+    private static Timer timer = Timer.getInstance();
     public static void main(String args[]){
+        timer.startTimer();
         int arr[];
 
         if(args.length >= 2 && args.length <= 3) {
@@ -21,6 +22,7 @@ public class Ack3 {
         }
 
         System.out.println(Ack(arr[0], arr[1], arr[2]));
+        timer.stopTimer();
     }
 
     private static int Ack(int m, int n, int p){
