@@ -6,8 +6,12 @@ public class Ack3 {
     public static void main(String args[]){
         int arr[];
 
-        if(false){
-
+        if(args.length >= 2 && args.length <= 3) {
+            arr = new int[args.length];
+            for (int i = 0; i < args.length; i++) {
+                arr[i] = Integer.parseInt(args[i]);
+                System.out.print(arr[i] + " ");
+            }
         }
         else{
             arr = new int[3];
