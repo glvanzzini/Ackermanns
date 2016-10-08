@@ -3,7 +3,7 @@
  */
 public class Ack2 {
 
-    public static void main(String[] args){
+    public static void main2(String[] args){
         int[] arr;
        if(args.length >= 2 && args.length <= 3){
            arr = new int[args.length];
