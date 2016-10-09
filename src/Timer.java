@@ -1,66 +1,42 @@
 /*
- *  Timer class to keep track time conveniently.
- *  Feel free to modify. This is based from the
- *  "MyTimerTest" class, except this was created
- *  to easily be able to be adaptable to the
- *  Exploration Project.
- *  
+ * Timer class
+ *
+ * This is the Timer singleton class to to be used for
+ * the Exploration programs. This will initiate the
+ * timer and stop the timer when being called. This will
+ * return the time passed in nanoseconds.
  */
-
-
-import java.util.Date;
 
 public class Timer {
 
     private static Timer instance = null;
     private static long lngStartIt;
     private static long lngStopIt;
-    private static int i, j = 100;
 
+    // constructor
     protected Timer(){
 
     }
 
+    // singleton constructor
     public static Timer getInstance(){
-        if(instance == null){
+        if(instance == null)
             instance = new Timer();
-        }
+
         return instance;
     }
 
-
+    // This will create the timer at the beginning of the program
     public static void startTimer(){
-        Date dteTms = new Date();
         lngStartIt = System.nanoTime();
-        //dteTms.getTime();
-
         System.out.println("Timer started at " + lngStartIt);
-
-//        for(i = 0; i < 1000; i++) {
-//            if (i % 2 == 0) {
-//                //System.out.println("Even");
-//                j = j + 1;
-//            } else {
-//                //System.out.println("Odd");
-//                j = j - 1;
-//            }
-//        }
     }
 
+    // Call this method whenever the program is done and it will
+    // return the time passed in nanoseconds.
     public static void stopTimer(){
-        Date dteRms = new Date();
         lngStopIt = System.nanoTime();
-
         System.out.println("Timer stopped at " + lngStopIt);
         System.out.println("Total time: " + (lngStopIt - lngStartIt) + " nanoseconds");
     }
-
-//    public static void printTimer(){
-//        Date dteCurrent = new Date();
-//        long lngCurrent = dteCurrent.getTime();
-//
-//        System.out.println("Current time is at " + lngCurrent);
-//        System.out.println("Current time in ms is in " + (lngCurrent - lngStartIt));
-//    }
-
 }
