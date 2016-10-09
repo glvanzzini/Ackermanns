@@ -10,11 +10,10 @@ public class Ack2 {
     private static Timer timer = Timer.getInstance();
     public static void main(String[] args){
         timer.startTimer(); //starts nanosecond timer
-        int m = 0;
+        int m = 0; //input variables
         int n = 0;
 
-        int[] arr;
-       if(args.length >= 2){ //if command line arguements are passed in use them
+       if(args.length >= 2){ //if command line arguments are passed in use them
            m = Integer.parseInt(args[0]);
            n = Integer.parseInt(args[1]);
        }else { //if not just use 3 and 2
