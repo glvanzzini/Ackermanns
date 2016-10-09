@@ -7,7 +7,7 @@
  * Purpose: To take in 2 command line integer inputs and return the value computed by the Ackermann function.
  */
 public class Ack2 {
-    private static Timer timer = Timer.getInstance();
+    private static Timer timer = Timer.getInstance(); //initializes timer
     public static void main(String[] args){
         timer.startTimer(); //starts nanosecond timer
         int m = 0; //input variables
