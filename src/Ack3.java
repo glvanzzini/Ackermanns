@@ -9,6 +9,7 @@ public class Ack3 {
 
         if(args.length >= 2 && args.length <= 3) {
             arr = new int[args.length];
+            System.out.print("The arguments: ");
             for (int i = 0; i < args.length; i++) {
                 arr[i] = Integer.parseInt(args[i]);
                 System.out.print(arr[i] + " ");
@@ -21,7 +22,7 @@ public class Ack3 {
             arr[2] = 3;
         }
 
-        System.out.println(Ack(arr[0], arr[1], arr[2]));
+        System.out.println("\nThe value: " + Ack(arr[0], arr[1], arr[2]));
         timer.stopTimer();
     }
 
